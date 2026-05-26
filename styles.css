@@ -156,9 +156,11 @@ p {
 h1 {
   max-width: 740px;
   margin: 0;
-  font-size: clamp(3rem, 8vw, 7.25rem);
-  line-height: 0.95;
+  font-size: clamp(3rem, 6.4vw, 6.25rem);
+  line-height: 0.98;
   letter-spacing: 0;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 h2 {
@@ -276,7 +278,7 @@ h3 {
 }
 
 .portrait-slot::before {
-  content: "SC";
+  content: "CC";
   display: grid;
   place-items: center;
   width: min(48vw, 260px);
@@ -367,7 +369,7 @@ h3 {
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -588,6 +590,10 @@ h3 {
   .quick-stats {
     min-width: 0;
     max-width: 100%;
+  }
+
+  .hero-section > * {
+    width: min(100%, calc(100vw - 48px));
   }
 
   .content-band,
